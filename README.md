@@ -13,3 +13,4 @@ Trying to reproduce the WebGL issue introduced with iOS 15.4: flickering UI-Imag
 * Occlusion Culling activated (even though it doesn't affect UI)
 * Added PointerDown-Listener
 * added back-frontside >> toggling enabled-state
+* added TMPro Text
