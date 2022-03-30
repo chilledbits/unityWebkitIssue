@@ -25,7 +25,7 @@ public class Main : MonoBehaviour, IPointerClickHandler {
 
     private void Update() {
         if (Time.time - lastUpdate > 0.1f) {
-            textfield.text = $"{Mathf.CeilToInt(1 / Time.deltaTime)}fps {listUpdateItem[listUpdateCounter]}";
+            textfield.text = $"{Mathf.CeilToInt(1 / Time.deltaTime)}fps{listUpdateItem[listUpdateCounter]}";
             lastUpdate = Time.time;
             if (++listUpdateCounter >= listUpdateItem.Count) {
                 listUpdateCounter = 0;
