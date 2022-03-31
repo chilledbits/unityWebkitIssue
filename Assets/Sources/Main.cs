@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -18,7 +17,7 @@ public class Main : MonoBehaviour, IPointerClickHandler {
     private List<string> listUpdateItem = new List<string> { "●", "●", "○", "○" };
 
     void Start() {
-        for (int i = 0; i < 120; i++) {
+        for (int i = 0; i < 1; i++) {
             cards.Add(Instantiate(cardPrefab, cardContainer.transform, false).GetComponent<Card>());
         }
     }
@@ -36,7 +35,7 @@ public class Main : MonoBehaviour, IPointerClickHandler {
 
     public void OnPointerClick(PointerEventData eventData) {
         animationsPaused = !animationsPaused;
-        DOTween.TogglePauseAll();
+        // DOTween.TogglePauseAll();
 
         foreach (var card in cards) {
             card.PauseAnimation(animationsPaused);
